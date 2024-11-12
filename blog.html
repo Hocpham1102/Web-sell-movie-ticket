@@ -7,8 +7,98 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <title>Blog</title>
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="57x57"
+    href="./img/logo/apple-icon-57x57.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="60x60"
+    href="./img/logo/apple-icon-60x60.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="72x72"
+    href="./img/logo/apple-icon-72x72.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="./img/logo/apple-icon-76x76.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="114x114"
+    href="./img/logo/apple-icon-114x114.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="120x120"
+    href="./img/logo/apple-icon-120x120.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="144x144"
+    href="./img/logo/apple-icon-144x144.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="152x152"
+    href="./img/logo/apple-icon-152x152.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="./img/logo/apple-icon-180x180.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="./img/logo/android-icon-192x192.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./img/logo/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="96x96"
+    href="./img/logo/favicon-96x96.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="./img/logo/favicon-16x16.png"
+  />
+  <link rel="manifest" href="./img/logo/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta
+    name="msapplication-TileImage"
+    content=".img/logo/ms-icon-144x144.png"
+  />
+  <meta name="theme-color" content="#ffffff" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  />
+  <title>New Clothes | Home</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
 </head>
 </head>
 <body>
@@ -24,7 +114,7 @@
           <li><a href="contact.html" target="_self">Login</a></li>
           <li><a href="contact.html" target="_self">Shoping</a></li>
         </ul>
-      </div>
+      <!-- </div>
       <div id="login">
         <div id="login-btn">
           <a class="login-active" href="login.html">
@@ -38,7 +128,68 @@
           </ul>
         </div>
         <a id="logo-shopping"  href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-      </div>
+      </div> -->
     </header>
+    <!-- Nd-->
+ <!-- Carousel -->
+ <div class="carousel">
+  <div id="carouselImages" class="carousel-inner">
+    <div class="carousel-item">
+      <img src="./img/blog/blog_1.bmp" alt="1" />
+    </div>
+    <div class="carousel-item">
+      <img src="./img/blog/blog_2.png" alt="2" />
+    </div>
+    <div class="carousel-item">
+      <img src="./img/blog/blog_3.bmp" alt="3" />
+    </div>
+  </div>
+  <button class="carousel-control-prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="carousel-control-next" onclick="changeSlide(1)">&#10095;</button>
+ </div>
+
+<!--Tabs-->
+<div class="tabs">
+  <button class="tab-button active" onclick="openTab(event, 'tab1')">Tab1</button>
+  <button class="tab-button" onclick="openTab(event, 'tab2')">Tab2</button>
+</div>
+
+<div id="tab1" class="tab-content active">
+  <!-- Blog Item-->
+  <div class="blog-items">
+    <div id="blog1" class="blog-item" onclick="viewDetails('blog1')">
+      <h3>Blog1</h3>
+      <img class="content-image" src="./img/2fpsspc2.bmp" alt="">
+    </div>
+    <div id="blog2" class="blog-item" onclick="viewDetails('blog2')">
+      <h3>Blog2</h3>
+    </div>
+    <div id="blog3" class="blog-item" onclick="viewDetails('blog3')">
+      <h3>Blog3</h3>
+    </div>
+    <div id="blog4" class="blog-item" onclick="viewDetails('blog4')">
+      <h3>Blog4</h3>
+    </div>
+    <div id="blog5" class="blog-item" onclick="viewDetails('blog5')">
+      <h3>Blog5</h3>
+    </div>
+    <div id="blog6" class="blog-item" onclick="viewDetails('blog6')">
+      <h3>Blog6</h3>
+    </div>
+  </div>
+</div>
+<div id="tab2" class="tab-content">
+</div>
+
+
+<!--modal-->
+<div id="blogModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div id="modalContent" class="modal-content">
+    <!--modal content will be set dynamically-->
+  </div>
+</div>
+
+    <script src="./js/blog.js"></script>
 </body>
 </html>
