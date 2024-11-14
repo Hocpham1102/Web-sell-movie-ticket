@@ -43,7 +43,7 @@ function viewDetails(blogId){
     const modalContent = document.getElementById("modalContent");
 
     //set the modal content to the html of the blog item
-    modalContent.innerHTML = blogItem.innerHTML;
+    //modalContent.innerHTML = blogItem.innerHTML;//
 
     //show the modal
     document.getElementById("blogModal").style.display = "block";

@@ -242,6 +242,8 @@ ul {
 .carousel {
  position: relative; /*không làm thay đổi vị trí ban đầu của phần tử trên bố cục. */
  width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
  overflow: hidden;/* ẩn phần nội dung vượt ra ngoài khung chứa */
 }
 .carousel-inner {
@@ -252,8 +254,10 @@ ul {
   min-width: 100%;/* chiều rộng tối thiểu của phần tử */
   box-sizing: border-box;/* kích thước của phần tử bao gồm padding và border */
 }
-.carousel  img {
+.carousel img {
   width: 100%;/* chiều rộng 100% */
+  display: block;/* hiển thị phần tử là block */
+  object-fit: cover;/* hiển thị hình ảnh mà không bị vỡ */
   display: block;/* hiển thị phần tử là block */
 }
 .carousel-control-next, .carousel-control-prev{
@@ -265,6 +269,7 @@ ul {
   border: none;/* không có viền */
   cursor: pointer;/* con trỏ chuột */
   padding: 10px;/* padding */
+  z-index: 1;/* chỉ số z */
 }
 .carousel-control-prev{
   left: 10px;/* căn chỉnh phần tử theo chiều ngang */
@@ -294,14 +299,58 @@ ul {
   display: block;/* hiển thị phần tử */
 }
 /*blog*/
-.blog-items{
-margin: 20px 0;/* khoảng cách */
+.blog-items {
+  display: flex;/* hiển thị các phần tử theo chiều ngang */
+  flex-wrap: wrap; /* cho phần tử xuống dòng khi không đủ không gian */
+  gap: 20px; /* khoảng cách giữa các phần tử */
+  justify-content: space-between; /* căn chỉnh các phần tử theo chiều ngang */
 }
-.blog-item{
-  border: 1px solid #ccc;/* viền */
-  padding: 10px;/* padding */
-  margin-top: 10px;/* khoảng cách */
-  cursor: pointer;/* con trỏ chuột */
+/* Định dạng cho mỗi blog item */
+.blog-item {
+  width: calc(33.33% - 30px); /* chiều rộng */
+  display: flex; /* hiển thị các phần tử theo chiều ngang */
+  flex-direction: column; /* căn chỉnh các phần tử theo chiều dọc */
+  align-items: center; /* căn chỉnh các phần tử theo chiều ngang */
+  text-align: center; /* căn chỉnh các phần tử theo chiều ngang */
+  border: 1px solid #e0e0e0; /* viền */
+  border-radius: 8px; /* bo tròn viền */
+  overflow: hidden; /* ẩn phần tử */
+  transition: transform 0.3s; /* hiệu ứng chuyển động */
+}
+.blog-item:hover {
+  transform: scale(1.05); /* phóng to phần tử */
+}
+/*edit hinh anh*/
+.content-image{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;/* tỷ lệ khung hình */
+  object-fit: cover; /* hiển thị hình ảnh mà không bị vỡ */
+}
+/*edit title*/
+.blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.blog-snippet {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.blog-title:hover,
+.blog-title.hover {
+  text-decoration: underline;
+}
+
+.blog-title:hover ~ .blog-title,
+.blog-title.hover ~ .blog-title {
+  text-decoration: underline;
 }
 /*modal*/
 .modal{
@@ -336,29 +385,6 @@ margin: 20px 0;/* khoảng cách */
   text-decoration: none;/* không gạch chân */
   cursor: pointer;/* con trỏ chuột */
 }
-/* Định dạng cho mỗi blog item */
-.blog-item {
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  cursor: pointer;
-}
 
-.blog-item h3 {
-  margin: 0;
-  font-size: 18px;
-}
-.content-image{
-  width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
-  height: 100%;
-  height: auto; /* Đảm bảo tỷ lệ của hình ảnh không bị thay đổi */
-  object-fit: cover; /* Cắt hình ảnh sao cho phù hợp mà không làm biến dạng */
-  border-radius: 8px; /* Thêm bo tròn cho hình ảnh nếu cần */
-}
- /* Sử dụng Grid để tạo ba cột */
- .blog-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tạo ba cột có chiều rộng bằng nhau */
-  gap: 15px; /* Khoảng cách giữa các ô */
-}
+
+
