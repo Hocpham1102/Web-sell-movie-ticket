@@ -100,7 +100,6 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
   />
 </head>
-</head>
 <body>
   <header>
       <a href="#"><img src="./img/New Clothes.gif" alt="" id="logo" /></a>
@@ -130,12 +129,14 @@
         <a id="logo-shopping"  href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
       </div> -->
     </header>
+    <!-- Tiêu Đề -->
+    <h1 id="title-god">Nội Dung "HOT"</h1>
     <!-- Nd-->
  <!-- Carousel -->
  <div class="carousel">
   <div id="carouselImages" class="carousel-inner">
     <div class="carousel-item">
-      <img src="./img/blog/blog4.webp" alt="1" />
+      <img src="./img/blog/di-bien-mac-gi-de-thu-hut-anh-nhin.webp" alt="1" />
     </div>
     <div class="carousel-item">
       <img src="./img/blog/blog5.webp" alt="2" />
@@ -150,42 +151,129 @@
 
 <!--Tabs-->
 <div class="tabs">
-  <button class="tab-button active" onclick="openTab(event, 'tab1')">Tab1</button>
-  <button class="tab-button" onclick="openTab(event, 'tab2')">Tab2</button>
+  <button class="tab-button active" onclick="openTab(event, 'tab1')">Xu hướng thời trang</button>
+  <button class="tab-button" onclick="openTab(event, 'tab2')">Kiến thức thời trang</button>
 </div>
 
 <div id="tab1" class="tab-content active">
   <!-- Blog Item-->
   <div class="blog-items">
     <div id="blog1" class="blog-item" onclick="viewDetails('blog1')">
-      <img class="content-image" src="./img/blog/cap-nhat-14-xu-huong-thoi-trang-xuan-he-2024-noi-bat-nhat.webp" alt="">
-      <h3 class="blog-title">“Share your color” - Cổ vũ tiếng nói cá nhân của Gen Z</h3>
-      <p class="blog-snippet">Gen Z hiện đang là một thế hệ đóng vai trò chủ lực trong thị trường tiêu thụ tại Việt Nam, đặc biệt là trong lĩnh vực thời trang...</p>
+      <img class="content-image" src="./img/blog/di-bien-mac-gi-de-thu-hut-anh-nhin.webp" alt="">
+      <h3 class="blog-title">“[Cập nhật] 14 Xu hướng thời trang xuân hè 2024 ...</h3>
+      <p class="blog-snippet">Bạn đã sẵn sàng để đón nhận mùa Xuân Hè 2024 với phong cách thời trang vô cùng ấn tượng? Trong bài viết này, chúng tôi sẽ hướng dẫn bạn...</p>
       <h3 class="blog-title">Xem thêm</h3>
     </div>
+    <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog1">
+    <h3>hahaah</h3>
+</div>
+    <!---->
     <div id="blog2" class="blog-item" onclick="viewDetails('blog2')">
       <img class="content-image" src="./img/blog/blog4.webp" alt="">
       <h3>Blog2</h3>  
     </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog2">
+  <h3>hihihh</h3>
+</div>
+  <!---->
     <div id="blog3" class="blog-item" onclick="viewDetails('blog3')">
       <img class="content-image" src="./img/blog/diem-danh-5-outfit-dan-dau-xu-huong-thoi-trang-giao-mua.webp" alt="">
       <h3>Blog3</h3>
     </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog3">
+  <h3>hahaah</h3>
+</div>
+  <!---->
     <div id="blog4" class="blog-item" onclick="viewDetails('blog4')">
       <img class="content-image" src="./img/blog/levents-classic.webp" alt="">
       <h3>Blog4</h3>
     </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog4">
+  <h3>hahaah</h3>
+</div>
+  <!---->
     <div id="blog5" class="blog-item" onclick="viewDetails('blog5')">
       <img class="content-image" src="./img/blog/levents_-local-brand-streetwear-voi-hoat-dong-cong-dong-an-tuong.webp" alt="">
       <h3>Blog5</h3>
     </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog5">
+  <h3>hahaah</h3>
+</div>
+  <!---->
     <div id="blog6" class="blog-item" onclick="viewDetails('blog6')">
       <img class="content-image" src="./img/blog/blog5.webp" alt="">
       <h3>Blog6</h3>
     </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog6">
+  <h3>hahaah</h3>
+</div>
+  <!---->
   </div>
 </div>
 <div id="tab2" class="tab-content">
+  <!-- Blog Item-->
+  <div class="blog-items">
+      <div id="blog7" class="blog-item" onclick="viewDetails('blog7')">
+        <img class="content-image" src="./img/blog/blog4.webp" alt="">
+        <h3>Blog7</h3>
+      </div>
+        <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog7">
+  <h3>hahaah</h3>
+</div>
+  <!---->
+      <div id="blog8" class="blog-item" onclick="viewDetails('blog8')">
+        <img class="content-image" src="./img/blog/diem-danh-5-outfit-dan-dau-xu-huong-thoi-trang-giao-mua.webp" alt="">
+        <h3>Blog8</h3>
+      </div>
+        <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog8">
+  <h3>hahaah</h3>
+</div>
+  <!---->
+      <div id="blog9" class="blog-item" onclick="viewDetails('blog9')">
+        <img class="content-image" src="./img/blog/levents-classic.webp" alt="">
+        <h3>Blog9</h3>
+    </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog9">
+  <h3>hahaah</h3>
+</div>
+  <!---->
+    <div id="blog10" class="blog-item" onclick="viewDetails('blog10')">
+      <img class="content-image" src="./img/blog/levents_-local-brand-streetwear-voi-hoat-dong-cong-dong-an-tuong.webp" alt="">
+      <h3>Blog10</h3>
+    </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog10">
+  <h3>hahaah</h3>
+</div>
+  <!---->
+    <div id="blog11" class="blog-item" onclick="viewDetails('blog11')">
+      <img class="content-image" src="./img/blog/blog5.webp" alt="">
+      <h3>Blog11</h3>
+    </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog11">
+  <h3>hahaah</h3>
+</div>
+  <!---->
+    <div id="blog12" class="blog-item" onclick="viewDetails('blog12')">
+      <img class="content-image" src="./img/blog/cap-nhat-14-xu-huong-thoi-trang-xuan-he-2024-noi-bat-nhat.webp" alt="">
+      <h3>Blog12</h3>
+    </div>
+      <!-- noi dung blog -->
+<div class="hidden-content" id="content-blog12">
+  <h3>hahaah</h3>
+</div>
+  <!---->
+  </div>
 </div>
 
 

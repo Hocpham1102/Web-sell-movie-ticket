@@ -42,17 +42,17 @@ function viewDetails(blogId){
     const blogItem = document.getElementById(blogId);
     const modalContent = document.getElementById("modalContent");
 
-    //set the modal content to the html of the blog item
-    //modalContent.innerHTML = blogItem.innerHTML;//
+    const modal = document.getElementById("blogModal");
 
-    //show the modal
-    document.getElementById("blogModal").style.display = "block";
-}
-
-//close the modal
-function closeModal(){
-    document.getElementById("blogModal").style.display = "none";
-}
+    // Lấy nội dung từ HTML
+    const blogContent = document.getElementById(`content-${blogId}`); // Lấy nội dung từ blogItem
+    if (blogContent) { // Kiểm tra nếu có nội dung
+      modalContent.innerHTML = blogContent.innerHTML; // Set nội dung cho modal
+      modal.style.display = "block"; // Hiển thị modal
+    } else {
+      modalContent.innerHTML = "<p>Nội dung chưa được cập nhật.</p>";
+      modal.style.display = "block";
+    }
 
 //close the modal when clicking outside the modal
 window.onclick = function(event){
@@ -60,4 +60,5 @@ window.onclick = function(event){
     if(event.target === modal){
         modal.style.display = "none";
     }
+  }
 }

@@ -277,6 +277,11 @@ ul {
 .carousel-control-next{
   right: 10px;/* căn chỉnh phần tử theo chiều ngang */
 }
+#title-god{
+  text-align: center; /* căn chỉnh các phần tử theo chiều ngang */
+  margin: 0 auto; /* căn chỉnh các phần tử theo chiều ngang */
+  margin-bottom: 30px; /* khoảng cách với phần tử bên dưới */
+}
 /*tabs*/
 .tabs{
   display: flex;/* hiển thị các phần tử theo chiều ngang */
@@ -323,9 +328,10 @@ ul {
 /*edit hinh anh*/
 .content-image{
   width: 100%;
-  height: auto;
+  height: 300px;
   aspect-ratio: 4 / 3;/* tỷ lệ khung hình */
   object-fit: cover; /* hiển thị hình ảnh mà không bị vỡ */
+  object-position: center; /* căn chỉnh hình ảnh */
 }
 /*edit title*/
 .blog-title {
@@ -334,6 +340,8 @@ ul {
   text-align: center;
   text-decoration: none;
   transition: text-decoration 0.3s ease;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .blog-snippet {
@@ -342,16 +350,17 @@ ul {
   text-align: center;
   margin-top: 10px;
 }
+/*edit h3*/
+/* Không gạch chân mặc định */
+.blog-item h3 {
+  text-decoration: none;
+}
 
-.blog-title:hover,
-.blog-title.hover {
+/* Gạch chân cả hai h3 khi hover vào bất kỳ h3 nào hoặc toàn bộ .blog-item */
+.blog-item:hover h3 {
   text-decoration: underline;
 }
 
-.blog-title:hover ~ .blog-title,
-.blog-title.hover ~ .blog-title {
-  text-decoration: underline;
-}
 /*modal*/
 .modal{
   display: none;/* ẩn phần tử */
@@ -385,6 +394,10 @@ ul {
   text-decoration: none;/* không gạch chân */
   cursor: pointer;/* con trỏ chuột */
 }
+.hidden-content {
+  display: none;
+}
+
 
 
 
