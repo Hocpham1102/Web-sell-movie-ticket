@@ -253,12 +253,20 @@ ul {
 .carousel-item{
   min-width: 100%;/* chiều rộng tối thiểu của phần tử */
   box-sizing: border-box;/* kích thước của phần tử bao gồm padding và border */
+  border: 5px solid transparent;/* viền */
+  animation: rainbow-border 3s infinite linear;/* hiệu ứng đổi màu */
+  transition: transform 0.5s ease;/* thời gian chuyển đổi 0.5s */
+}
+.carousel-item:hover{
+  transform: scale(1.05);/* phóng to phần tử */
+  box-shadow: 0 0 15px rgb(0, 0, 0, 0.5); /* đổ bóng */
 }
 .carousel img {
   width: 100%;/* chiều rộng 100% */
   display: block;/* hiển thị phần tử là block */
   object-fit: cover;/* hiển thị hình ảnh mà không bị vỡ */
   display: block;/* hiển thị phần tử là block */
+  height: 500px;/* chiều cao */
 }
 .carousel-control-next, .carousel-control-prev{
   position: absolute;/* vị trí tuyệt đối phần tử sẽ được tách ra khỏi dòng chảy bình thường của tài liệu, tức là nó không còn chiếm không gian trong bố cục của các phần tử khác.*/
@@ -281,6 +289,10 @@ ul {
   text-align: center; /* căn chỉnh các phần tử theo chiều ngang */
   margin: 0 auto; /* căn chỉnh các phần tử theo chiều ngang */
   margin-bottom: 30px; /* khoảng cách với phần tử bên dưới */
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  animation: rainbow 3s infinite linear; /* Hiệu ứng đổi màu */
 }
 /*tabs*/
 .tabs{
@@ -295,7 +307,7 @@ ul {
   margin-right: 5px;/* khoảng cách với phần tử bên cạnh */
 }
 .tab-button.active{
-  background-color: #ddd;/* màu nền */
+  background-color: #878787;/* màu nền */
 }
 .tab-content{
   display: none;/* ẩn phần tử */
@@ -317,10 +329,10 @@ ul {
   flex-direction: column; /* căn chỉnh các phần tử theo chiều dọc */
   align-items: center; /* căn chỉnh các phần tử theo chiều ngang */
   text-align: center; /* căn chỉnh các phần tử theo chiều ngang */
-  border: 1px solid #e0e0e0; /* viền */
-  border-radius: 8px; /* bo tròn viền */
+  border: 1px solid white; /* viền */
   overflow: hidden; /* ẩn phần tử */
   transition: transform 0.3s; /* hiệu ứng chuyển động */
+  margin-bottom: 30px;
 }
 .blog-item:hover {
   transform: scale(1.05); /* phóng to phần tử */
@@ -328,10 +340,13 @@ ul {
 /*edit hinh anh*/
 .content-image{
   width: 100%;
-  height: 300px;
+  height: 350px;
   aspect-ratio: 4 / 3;/* tỷ lệ khung hình */
   object-fit: cover; /* hiển thị hình ảnh mà không bị vỡ */
   object-position: center; /* căn chỉnh hình ảnh */
+  background-size: cover; /* hiển thị hình ảnh mà không bị vỡ */
+  background-position: center; /* căn chỉnh hình ảnh */
+  background-repeat: no-repeat; /* không lặp lại hình ảnh */
 }
 /*edit title*/
 .blog-title {
@@ -371,7 +386,7 @@ ul {
   width: 100%;
   height: 100%;
   overflow: auto;/* hiển thị thanh cuộn */
-  background-color: rgba(0, 0, 0, 0.4);/* màu nền */
+  background-color: rgba(0, 0, 0, 0.95);/* màu nền */
 }
 .modal-content{
   background-color: #fefefe;/* màu nền */
@@ -379,8 +394,8 @@ ul {
   padding: 20px;/* padding */
   border: 1px solid #888;/* viền */
   width: 80%;/* chiều rộng */
-  height: 80%; 
-  display: table  ; 
+  height: auto; 
+
 }
 .close{
   color: #aaa;/* màu chữ */
@@ -390,13 +405,79 @@ ul {
 }
 .close:hover,
 .close:focus{
-  color: black;/* màu chữ */
+  color: red;/* màu chữ */
   text-decoration: none;/* không gạch chân */
   cursor: pointer;/* con trỏ chuột */
 }
 .hidden-content {
   display: none;
 }
+.title-content > *{
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2.title-content{
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+h3.title-content{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+figure.title-content{
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+/*Thanh cuon*/
+/* Webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 4px; /* Chiều rộng thanh cuộn dọc */
+  height: 4px; /* Chiều cao thanh cuộn ngang */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Màu thanh cuộn */
+  border-radius: 10px; /* Bo góc */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Màu khi hover */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Màu nền của thanh cuộn */
+}
+
+/* Firefox */
+body {
+  scrollbar-width: thin; /* Làm thanh cuộn mỏng */
+  scrollbar-color: #888 #f1f1f1; /* Màu thanh cuộn và màu nền */
+}
+/* Khi body bị khóa cuộn */
+body.modal-open{
+  overflow: hidden;
+}
+/*hiệu ứng chữ*/
+@keyframes rainbow { 
+  0% { color: red; }
+  20% { color: orange; }
+  40% { color: yellow; }
+  60% { color: green; }
+  80% { color: blue; }
+  100% { color: violet; }
+}
+
+@keyframes rainbow-border {
+  0% { border-color: red; }
+  20% { border-color: orange; }
+  40% { border-color: yellow; }
+  60% { border-color: green; }
+  80% { border-color: blue; }
+  100% { border-color: violet; }
+}
+
+
 
 
 

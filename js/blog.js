@@ -1,4 +1,5 @@
 let currentSlide = 0;
+const slideInterval = 3000; // thoi gian chuyen slide (ms)
 //Ham thay doi slide
 function changeSlide(step){
     currentSlide += step;
@@ -18,6 +19,11 @@ function showSlide(slideIndex){
     const offset = currentSlide * 100; // tinh offset cho slide
     document.getElementById("carouselImages").style.transform = `translateX(-${offset}%)`; //thay doi giao dien slide
 }
+
+//ham tu chuyen slide
+setInterval(() => {
+    changeSlide(1);
+}, slideInterval);
 
 function openTab(event, tabId) {
     //remove active class from all tabs buttons
@@ -41,7 +47,6 @@ function viewDetails(blogId){
     //Get the clicked blog item
     const blogItem = document.getElementById(blogId);
     const modalContent = document.getElementById("modalContent");
-
     const modal = document.getElementById("blogModal");
 
     // Lấy nội dung từ HTML
@@ -51,14 +56,29 @@ function viewDetails(blogId){
       modal.style.display = "block"; // Hiển thị modal
     } else {
       modalContent.innerHTML = "<p>Nội dung chưa được cập nhật.</p>";
-      modal.style.display = "block";
     }
+    //reset modal   content scroll
+    modal.scrollTop = 0;
+
+      //hiện thị modal và thanh cuộn
+      modal.style.display = "block";
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open"); // Ngăn cuộn
+    
+}
+    //close the modal when clicking the close button
+    function closeModal() {
+        const modal = document.getElementById("blogModal");
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+    }
+ 
 
 //close the modal when clicking outside the modal
 window.onclick = function(event){
     const modal = document.getElementById("blogModal");
     if(event.target === modal){
-        modal.style.display = "none";
+        closeModal();
     }
   }
-}
