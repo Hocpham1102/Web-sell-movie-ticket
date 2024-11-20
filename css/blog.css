@@ -242,7 +242,7 @@ ul {
 .carousel {
  position: relative; /*không làm thay đổi vị trí ban đầu của phần tử trên bố cục. */
  width: 100%;
- max-width: 1200px;
+ max-width: 100%;
  margin: 0 auto;
  overflow: hidden;/* ẩn phần nội dung vượt ra ngoài khung chứa */
 }
@@ -253,8 +253,6 @@ ul {
 .carousel-item{
   min-width: 100%;/* chiều rộng tối thiểu của phần tử */
   box-sizing: border-box;/* kích thước của phần tử bao gồm padding và border */
-  border: 5px solid transparent;/* viền */
-  animation: rainbow-border 3s infinite linear;/* hiệu ứng đổi màu */
   transition: transform 0.5s ease;/* thời gian chuyển đổi 0.5s */
 }
 .carousel-item:hover{

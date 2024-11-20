@@ -5,6 +5,7 @@ const loginLink = document.querySelector(".login-link");
 const registerLink = document.querySelector(".register-link");
 const home = document.querySelectorAll(".home"); //nut Home tren nav
 const shop = document.querySelectorAll(".shop");
+const blog = document.querySelectorAll(".blog");
 const address_btn = document.querySelector(".address-btn");
 const content_addressbtn = document.querySelector("#footer-paragraph");
 const social_btn = document.querySelector(".social-btn");
@@ -38,6 +39,11 @@ home.forEach(function (e) {
 shop.forEach(function (e) {
   e.addEventListener("click", () => {
     window.location.href = "shop.html";
+  });
+});
+blog.forEach(function (e) {
+  e.addEventListener("click", () => {
+    window.location.href = "blog.html";
   });
 });
 const close_nav = document.querySelector(".close-nav");
