@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Spartan", sans-serif;
+  font-family: "Sour Gummy", serif !important;
   margin: 0;
   padding: 0;
 }
@@ -122,12 +122,9 @@ body {
 .box-login {
   background: url("../img/login/login-background-1024x576.jpg") no-repeat;
   width: 100%;
-  height: 0;
   background-size: cover;
   background-position: center;
   position: relative;
-  transform: scale(0);
-  overflow: hidden;
   transition: transform 0.5s ease;
 }
 .container {
@@ -299,11 +296,6 @@ body {
   transition-delay: 0s;
 }
 
-.box-login.active {
-  position: relative;
-  transform: scale(1);
-}
-
 /* Policy */
 #privacy-policy {
   display: none;
@@ -338,14 +330,15 @@ body {
 }
 
 #policy-contact-h3 {
+  margin: 0 10px 0 0;
   display: flex;
   align-items: center;
-  margin-right: 10px;
 }
 
 .policy-contact-a {
   text-decoration: none;
   color: red;
+  /* căn giữa các pt trong tag a */
   display: flex;
   align-items: center;
 }
